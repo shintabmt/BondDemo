@@ -1,7 +1,5 @@
-package com.phillip.bond.bonddemo.fragment;
+package com.phillip.bond.bonddemo.fragments;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -10,7 +8,7 @@ import android.view.ViewGroup;
 
 import com.inqbarna.tablefixheaders.TableFixHeaders;
 import com.phillip.bond.bonddemo.R;
-import com.phillip.bond.bonddemo.adapters.MatrixTableAdapter;
+import com.phillip.bond.bonddemo.views.adapters.MatrixTableAdapter;
 
 public class PriceFragment extends Fragment {
 

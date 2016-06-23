@@ -1,4 +1,4 @@
-package com.phillip.bond.bonddemo.adapters;
+package com.phillip.bond.bonddemo.views.adapters;
 
 import android.content.Context;
 import android.content.res.Resources;

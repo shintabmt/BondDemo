@@ -1,4 +1,4 @@
-package com.phillip.bond.bonddemo.activity;
+package com.phillip.bond.bonddemo.activities;
 
 import android.content.Intent;
 import android.os.Bundle;

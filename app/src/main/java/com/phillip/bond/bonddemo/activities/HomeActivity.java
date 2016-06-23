@@ -1,25 +1,17 @@
-package com.phillip.bond.bonddemo.activity;
+package com.phillip.bond.bonddemo.activities;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
-import android.util.TypedValue;
-import android.view.Gravity;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.astuetz.PagerSlidingTabStrip;
 import com.phillip.bond.bonddemo.R;
 import com.phillip.bond.bonddemo.base.CalligraphyActivity;
-import com.phillip.bond.bonddemo.fragment.TradeBondFragment;
-import com.phillip.bond.bonddemo.fragment.PriceFragment;
-import com.phillip.bond.bonddemo.fragment.OderStatusFragment;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.phillip.bond.bonddemo.fragments.TradeBondFragment;
+import com.phillip.bond.bonddemo.fragments.PriceFragment;
+import com.phillip.bond.bonddemo.fragments.OderStatusFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
