@@ -15,31 +15,30 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 public abstract class BaseActivity extends AppCompatActivity {
 
     public Unbinder mUnbinder = null;
-    int onStartCount = 0;
+    boolean isCreated = false;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        onStartCount = 1;
+        isCreated = false;
         if (savedInstanceState == null) // 1st time
         {
             this.overridePendingTransition(R.anim.anim_slide_in_left,
                     R.anim.anim_slide_out_left);
         } else // already created so reverse animation
         {
-            onStartCount = 2;
+            isCreated = true;
         }
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        if (onStartCount > 1) {
+        if (isCreated == true) {
             this.overridePendingTransition(R.anim.anim_slide_in_right,
                     R.anim.anim_slide_out_right);
-
-        } else if (onStartCount == 1) {
-            onStartCount++;
+        } else {
+            isCreated = true;
         }
 
     }

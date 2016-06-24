@@ -11,19 +11,19 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.MainActivity">
+        <activity android:name=".activities.MainActivity"></activity>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="99654ff8d5edada2a1376e751f40c627aec58e7e" />
+
+        <activity android:name=".activities.SignInActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <meta-data
-            android:name="io.fabric.ApiKey"
-            android:value="99654ff8d5edada2a1376e751f40c627aec58e7e" />
-
-        <activity android:name=".activities.SignInActivity"></activity>
         <activity android:name=".activities.HomeActivity"></activity>
     </application>
 

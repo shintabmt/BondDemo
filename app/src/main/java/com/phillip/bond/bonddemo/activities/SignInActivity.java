@@ -26,6 +26,5 @@ public class SignInActivity extends BaseActivity {
     @OnClick(R.id.btn_sign_in) void signIn() {
         Intent intent = new Intent(this, HomeActivity.class );
         startActivity(intent);
-        finish();
     }
 }

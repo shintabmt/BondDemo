@@ -1,5 +1,6 @@
 package com.phillip.bond.bonddemo.activities;
 
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -9,6 +10,8 @@ import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.phillip.bond.bonddemo.R;
 import com.phillip.bond.bonddemo.base.BaseActivity;
@@ -22,6 +25,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class HomeActivity extends BaseActivity {
 
@@ -56,6 +60,10 @@ public class HomeActivity extends BaseActivity {
         mTabBar.getTabAt(ODER_STATUS_FRAGMENT).setIcon(tabIcons.getResourceId(tabIcons.getIndex(ODER_STATUS_FRAGMENT), -1));
         mTabBar.getTabAt(TRADE_FRAGMENT).setIcon(tabIcons.getResourceId(tabIcons.getIndex(TRADE_FRAGMENT), -1));
         tabIcons.recycle();
+    }
+
+    @OnClick(R.id.log_out) void logOut() {
+        this.finish();
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {
