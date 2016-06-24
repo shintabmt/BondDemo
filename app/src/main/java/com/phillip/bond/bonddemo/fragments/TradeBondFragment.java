@@ -7,8 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.phillip.bond.bonddemo.R;
+import com.phillip.bond.bonddemo.base.BaseFragment;
 
-public class TradeBondFragment extends Fragment {
+public class TradeBondFragment extends BaseFragment {
 
     public static TradeBondFragment newInstance() {
         TradeBondFragment fragment = new TradeBondFragment();

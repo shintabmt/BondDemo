@@ -3,4 +3,6 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="tab_indicator_height">5dp</dimen>
+    <dimen name="margin_medium_dimen">10dp</dimen>
+    <dimen name="margin_view_child_dimen">5dp</dimen>
 </resources>

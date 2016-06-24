@@ -1,6 +1,9 @@
 package com.phillip.bond.bonddemo.fragments;
 
+import android.content.Context;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,8 +12,15 @@ import android.view.ViewGroup;
 import com.inqbarna.tablefixheaders.TableFixHeaders;
 import com.phillip.bond.bonddemo.R;
 import com.phillip.bond.bonddemo.views.adapters.MatrixTableAdapter;
+import com.phillip.bond.bonddemo.base.BaseFragment;
 
-public class PriceFragment extends Fragment {
+import butterknife.BindView;
+
+public class PriceFragment extends BaseFragment {
+
+    @BindView(R.id.table) TableFixHeaders mTableFixHeaders;
+
+    private MatrixTableAdapter<String> mMatrixTableAdapter;
 
     public static PriceFragment newInstance() {
         PriceFragment fragment = new PriceFragment();
@@ -25,14 +35,17 @@ public class PriceFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View contentView = inflater.inflate(R.layout.fragment_price, container, false);
-        initTable(contentView);
-        return contentView;
+        return inflater.inflate(R.layout.fragment_price, container, false);
+    }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        initTable(view);
     }
 
     void initTable(View view) {
-        TableFixHeaders tableFixHeaders = (TableFixHeaders) view.findViewById(R.id.table);
-        MatrixTableAdapter<String> matrixTableAdapter = new MatrixTableAdapter<String>(this.getActivity(), new String[][]{
+        mMatrixTableAdapter = new MatrixTableAdapter<String>(this.getActivity(), new String[][]{
                 {
                         "Header 1",
                         "Header 2",
@@ -237,7 +250,7 @@ public class PriceFragment extends Fragment {
                         "fugiat",
                         "laborum"}
         });
-        tableFixHeaders.setAdapter(matrixTableAdapter);
+        mTableFixHeaders.setAdapter(mMatrixTableAdapter);
     }
 
 }

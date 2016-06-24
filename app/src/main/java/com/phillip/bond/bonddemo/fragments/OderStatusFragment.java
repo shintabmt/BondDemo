@@ -7,8 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.phillip.bond.bonddemo.R;
+import com.phillip.bond.bonddemo.base.BaseFragment;
 
-public class OderStatusFragment extends Fragment {
+public class OderStatusFragment extends BaseFragment {
 
     public static OderStatusFragment newInstance() {
         OderStatusFragment fragment = new OderStatusFragment();

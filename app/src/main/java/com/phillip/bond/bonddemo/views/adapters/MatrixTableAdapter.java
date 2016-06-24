@@ -15,6 +15,10 @@ import com.inqbarna.tablefixheaders.adapters.BaseTableAdapter;
 
 public class MatrixTableAdapter<T> extends BaseTableAdapter {
 
+	final static int HEADER_ROW = 0;
+	final static int EVEN_ROW = 1;
+	final static int ODD_ROW = 2;
+
 	private final static int WIDTH_DIP = 110;
 	private final static int HEIGHT_DIP = 32;
 
@@ -86,31 +90,31 @@ public class MatrixTableAdapter<T> extends BaseTableAdapter {
 		final int rowType = getItemViewType(row, column);
 		holder.textView.setText(cell);
 		switch (rowType) {
-			case 0:
+			case HEADER_ROW:
 				holder.background.setBackgroundColor(context.getResources().getColor(R.color.yellow));
 				break;
-			case 1:
+			case EVEN_ROW:
 				holder.background.setBackgroundColor(context.getResources().getColor(R.color.green));
 				break;
-			case 2:
+			case ODD_ROW:
 				holder.background.setBackgroundColor(context.getResources().getColor(R.color.blue));
 				break;
 			default:
-				throw new RuntimeException("wtf?");
+				throw new RuntimeException();
 		}
 		convertView.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				switch (rowType) {
-					case 0:
+					case HEADER_ROW:
 						Toast.makeText(context,cell,Toast.LENGTH_SHORT).show();
 						break;
-					case 1:
+					case EVEN_ROW:
 						break;
-					case 2:
+					case ODD_ROW:
 						break;
 					default:
-						throw new RuntimeException("wtf?");
+						throw new RuntimeException();
 				}
 			}
 		});

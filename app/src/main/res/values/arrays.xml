@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="tab_bar_title">
+        <item>"Price"</item>
+        <item>"Oder Status"</item>
+        <item>"Trade"</item>
+    </string-array>
+    <integer-array name="tab_bar_icon">
+        <item>@drawable/ic_tab_price</item>
+        <item>@drawable/ic_tab_oder_status</item>
+        <item>@drawable/ic_tab_oder_status</item>
+        <item>@drawable/ic_tab_trade</item>
+    </integer-array>
+
+</resources>

@@ -4,9 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.phillip.bond.bonddemo.R;
-import com.phillip.bond.bonddemo.base.CalligraphyActivity;
+import com.phillip.bond.bonddemo.base.BaseActivity;
 
-public class MainActivity extends CalligraphyActivity {
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
