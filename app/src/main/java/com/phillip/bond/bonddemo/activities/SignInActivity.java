@@ -5,13 +5,13 @@ import android.os.Bundle;
 import android.widget.EditText;
 
 import com.phillip.bond.bonddemo.R;
-import com.phillip.bond.bonddemo.base.BaseActivity;
+import com.phillip.bond.bonddemo.base.TransactionAnimationActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class SignInActivity extends BaseActivity {
+public class SignInActivity extends TransactionAnimationActivity {
 
     @BindView(R.id.edt_user_id)   EditText userId;
     @BindView(R.id.edt_password)  EditText password;

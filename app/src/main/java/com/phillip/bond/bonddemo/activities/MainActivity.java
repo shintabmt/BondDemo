@@ -4,9 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.phillip.bond.bonddemo.R;
-import com.phillip.bond.bonddemo.base.BaseActivity;
+import com.phillip.bond.bonddemo.base.TransactionAnimationActivity;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends TransactionAnimationActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -10,13 +10,13 @@ import android.view.ViewGroup;
 import com.cocosw.bottomsheet.BottomSheet;
 import com.inqbarna.tablefixheaders.TableFixHeaders;
 import com.phillip.bond.bonddemo.R;
-import com.phillip.bond.bonddemo.base.BaseFragment;
+import com.phillip.bond.bonddemo.base.ButterKnifeFragment;
 import com.phillip.bond.bonddemo.views.adapters.MatrixTableAdapter;
 
 import butterknife.BindView;
 import butterknife.OnClick;
 
-public class PriceFragment extends BaseFragment {
+public class PriceFragment extends ButterKnifeFragment {
 
     static final int FILTER_BY_ISSUER = 1;
     static final int FILTER_BY_CURRENCY = 2;

@@ -1,15 +1,14 @@
 package com.phillip.bond.bonddemo.fragments;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.phillip.bond.bonddemo.R;
-import com.phillip.bond.bonddemo.base.BaseFragment;
+import com.phillip.bond.bonddemo.base.ButterKnifeFragment;
 
-public class OderStatusFragment extends BaseFragment {
+public class OderStatusFragment extends ButterKnifeFragment {
 
     public static OderStatusFragment newInstance() {
         OderStatusFragment fragment = new OderStatusFragment();
