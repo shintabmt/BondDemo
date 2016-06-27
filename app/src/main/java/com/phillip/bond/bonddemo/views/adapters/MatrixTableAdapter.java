@@ -15,6 +15,11 @@ import com.inqbarna.tablefixheaders.adapters.BaseTableAdapter;
 
 public class MatrixTableAdapter<T> extends BaseTableAdapter {
 
+	public interface onClickListener{
+		public void onClickHeader();
+		public void onClickRow();
+	}
+
 	final static int HEADER_ROW = 0;
 	final static int EVEN_ROW = 1;
 	final static int ODD_ROW = 2;
@@ -28,13 +33,15 @@ public class MatrixTableAdapter<T> extends BaseTableAdapter {
 
 	private final int width;
 	private final int height;
+	private  onClickListener mlistener;
 
 	public MatrixTableAdapter(Context context) {
-		this(context, null);
+		this(context, null, null);
 	}
 
-	public MatrixTableAdapter(Context context, T[][] table) {
+	public MatrixTableAdapter(Context context, T[][] table, onClickListener listener) {
 		this.context = context;
+		this.mlistener = listener;
 		Resources r = context.getResources();
 
 		width = Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, WIDTH_DIP, r.getDisplayMetrics()));
@@ -107,11 +114,13 @@ public class MatrixTableAdapter<T> extends BaseTableAdapter {
 			public void onClick(View v) {
 				switch (rowType) {
 					case HEADER_ROW:
-						Toast.makeText(context,cell,Toast.LENGTH_SHORT).show();
+						mlistener.onClickHeader();
 						break;
 					case EVEN_ROW:
+						mlistener.onClickRow();
 						break;
 					case ODD_ROW:
+						mlistener.onClickRow();
 						break;
 					default:
 						throw new RuntimeException();
@@ -152,11 +161,11 @@ public class MatrixTableAdapter<T> extends BaseTableAdapter {
 	@Override
 	public int getItemViewType(int row, int column) {
 		if (row < 0) {
-			return 0;
+			return HEADER_ROW;
 		} else if (row %2 == 0) {
-			return 1;
+			return EVEN_ROW;
 		} else {
-			return 2;
+			return ODD_ROW;
 		}
 	}
 

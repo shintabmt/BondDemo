@@ -6,11 +6,42 @@
         <item>"Oder Status"</item>
         <item>"Trade"</item>
     </string-array>
-    <integer-array name="tab_bar_icon">
+    <array name="tab_bar_icon">
         <item>@drawable/ic_tab_price</item>
         <item>@drawable/ic_tab_oder_status</item>
-        <item>@drawable/ic_tab_oder_status</item>
         <item>@drawable/ic_tab_trade</item>
-    </integer-array>
+    </array>
+
+    <string-array name="filter_by_isser_items">
+        <item>"Issuer 1"</item>
+        <item>"Issuer 2"</item>
+        <item>"Issuer 3"</item>
+        <item>"All Issuer"</item>
+    </string-array>
+    <string-array name="filter_by_currency_items">
+        <item>"SGD"</item>
+        <item>"USD"</item>
+        <item>"EUR"</item>
+        <item>"All currency"</item>
+    </string-array>
+    <string-array name="filter_by_watch_list_items">
+        <item>"My Watch List"</item>
+        <item>"PILLIPS List"</item>
+        <item>"Facebook Inc"</item>
+    </string-array>
+
+    <string-array name="bond_action_menu">
+        <item>"Place Trades"</item>
+        <item>"View Information"</item>
+        <item>"Add"</item>
+        <item>"Remove"</item>
+    </string-array>
+
+    <array name="bond_action_menu_icon">
+        <item>@drawable/ic_menu_place_trade</item>
+        <item>@drawable/ic_menu_info</item>
+        <item>@drawable/ic_menu_add</item>
+        <item>@drawable/ic_menu_remove</item>
+    </array>
 
 </resources>

@@ -1,12 +1,56 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.phillip.bond.bonddemo.fragments.PriceFragment">
 
+
+
+    <LinearLayout
+        android:id="@+id/filter_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/margin_medium_dimen"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_issuer"
+            style="?android:attr/spinnerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium_dimen"
+            android:layout_marginRight="@dimen/margin_medium_dimen"
+            android:layout_weight="1"
+            android:text="@string/issuer_filter" />
+
+        <Button
+            android:id="@+id/btn_currency"
+            style="?android:attr/spinnerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium_dimen"
+            android:layout_marginRight="@dimen/margin_medium_dimen"
+            android:layout_weight="1"
+            android:text="@string/curency_filter" />
+
+        <Button
+            android:id="@+id/btn_watch_list"
+            style="?android:attr/spinnerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium_dimen"
+            android:layout_marginRight="@dimen/margin_medium_dimen"
+            android:layout_weight="1"
+            android:text="@string/watch_list_filter" />
+
+    </LinearLayout>
+
     <com.inqbarna.tablefixheaders.TableFixHeaders
         android:id="@+id/table"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/filter_Layout"
         android:scrollbars="horizontal|vertical" />
-</FrameLayout>
+
+</RelativeLayout>

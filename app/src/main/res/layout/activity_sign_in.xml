@@ -68,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/margin_view_child_dimen"
-                android:backgroundTint="@color/blue_btn"
+                android:background="@drawable/button_blue_border_round_all"
                 android:text="Sign In" />
         </LinearLayout>
 

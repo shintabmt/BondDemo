@@ -55,10 +55,10 @@ public class HomeActivity extends BaseActivity {
         viewPager.setAdapter(adapter);
     }
 
-    private void setupTabIcons(TypedArray tabIcons) {
-        mTabBar.getTabAt(PRICE_FRAGMENT).setIcon(tabIcons.getResourceId(tabIcons.getIndex(PRICE_FRAGMENT), -1));
-        mTabBar.getTabAt(ODER_STATUS_FRAGMENT).setIcon(tabIcons.getResourceId(tabIcons.getIndex(ODER_STATUS_FRAGMENT), -1));
-        mTabBar.getTabAt(TRADE_FRAGMENT).setIcon(tabIcons.getResourceId(tabIcons.getIndex(TRADE_FRAGMENT), -1));
+    private void setupTabIcons(final TypedArray tabIcons) {
+        mTabBar.getTabAt(PRICE_FRAGMENT).setIcon(tabIcons.getResourceId(PRICE_FRAGMENT, -1));
+        mTabBar.getTabAt(ODER_STATUS_FRAGMENT).setIcon(tabIcons.getResourceId(ODER_STATUS_FRAGMENT, -1));
+        mTabBar.getTabAt(TRADE_FRAGMENT).setIcon(tabIcons.getResourceId(TRADE_FRAGMENT, -1));
         tabIcons.recycle();
     }
 
