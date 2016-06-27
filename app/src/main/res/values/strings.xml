@@ -21,4 +21,7 @@
     <string name="view_information">View Information</string>
     <string name="remove">Remove</string>
     <string name="add">Add</string>
+    <string name="filter_by_issuer_title">Chose your issuer</string>
+    <string name="filter_by_currency_title">Chose your currentcy</string>
+    <string name="filter_by_watch_list_title">Chose your watch list</string>
 </resources>

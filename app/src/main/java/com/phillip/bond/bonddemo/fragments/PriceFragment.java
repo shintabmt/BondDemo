@@ -65,26 +65,36 @@ public class PriceFragment extends ButterKnifeFragment {
         for (int i = 0; i<actionMenuTitles.length; i++) {
             bottomSheet.sheet(i, actionMenuIcons.getDrawable(i), actionMenuTitles[i]);
         }
+        bottomSheet.title(getResources().getString(R.string.action_confirm));
         bottomSheet.build();
         bottomSheet.show();
     }
 
     void showFilterDialog(int type){
         String[] filterTitles = null;
-        switch (type){
-            case FILTER_BY_ISSUER : filterTitles = getActivity().getResources().getStringArray(R.array.filter_by_isser_items);
+        String title;
+        switch (type) {
+            case FILTER_BY_ISSUER:
+                filterTitles = getActivity().getResources().getStringArray(R.array.filter_by_isser_items);
+                title = getResources().getString(R.string.filter_by_issuer_title);
                 break;
-            case  FILTER_BY_CURRENCY: filterTitles = getActivity().getResources().getStringArray(R.array.filter_by_currency_items);
+            case FILTER_BY_CURRENCY:
+                filterTitles = getActivity().getResources().getStringArray(R.array.filter_by_currency_items);
+                title = getResources().getString(R.string.filter_by_currency_title);
                 break;
-            case FILTER_BY_WATCH_LIST: filterTitles = getActivity().getResources().getStringArray(R.array.filter_by_watch_list_items);
+            case FILTER_BY_WATCH_LIST:
+                filterTitles = getActivity().getResources().getStringArray(R.array.filter_by_watch_list_items);
+                title = getResources().getString(R.string.filter_by_watch_list_title);
                 break;
-            default: return;
+            default:
+                return;
         }
         BottomSheet.Builder bottomSheet = new BottomSheet.Builder(getActivity());
+        bottomSheet.title(title);
         for (int i = 0; i<filterTitles.length; i++) {
             bottomSheet.sheet(i, null, filterTitles[i]);
         }
-        bottomSheet.build();
+            bottomSheet.build();
         bottomSheet.show();
     }
 
